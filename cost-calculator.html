@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Repair Cost Calculator for Central Texas | Central Texas Home Guide</title>
+<meta name="description" content="Work out what your job should cost in Central Texas. Enter your home size and details for an instant estimate on AC replacement, roofing, water heaters and foundation repair.">
+<meta property="og:title" content="Home Repair Cost Calculator for Central Texas">
+<meta property="og:description" content="Instant local estimates for AC, roofing, water heaters and foundations.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://marndmee-beep.github.io/centraltexashomeguide/cost-calculator.html">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:#faf9f7;color:#1f2937;line-height:1.75}
+header{background:#14532d;color:#fff;padding:16px 24px}header a{color:#fff;text-decoration:none;font-size:20px;font-weight:700;font-family:system-ui,sans-serif}
+.wrap{max-width:760px;margin:auto;padding:36px 20px}
+h1{font-size:34px;line-height:1.25;margin:0 0 14px}h2{font-size:24px;margin:36px 0 12px;color:#14532d}
+.lead{font-size:19px;color:#4b5563}
+.calc{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px;margin:24px 0;font-family:system-ui,sans-serif}
+.calc label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px;color:#374151}
+.calc input,.calc select{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:8px;font:inherit}
+.calc button{background:#14532d;color:#fff;border:0;border-radius:8px;padding:12px 20px;font-weight:700;font:inherit;cursor:pointer;margin-top:16px;width:100%}
+#result{margin-top:18px;padding:18px;border-radius:10px;background:#f0fdf4;border:1px solid #86efac;display:none;font-family:system-ui,sans-serif}
+#result b{font-size:26px;color:#14532d;display:block;margin:4px 0 6px}
+ul{padding-left:22px}li{margin-bottom:8px}
+.note{background:#fffbeb;border-left:4px solid #f59e0b;padding:14px 16px;margin:20px 0;font-size:15px}
+.ad{border:1px dashed #d1d5db;background:#f9fafb;color:#9ca3af;text-align:center;padding:18px;margin:28px 0;font-family:system-ui,sans-serif;font-size:13px;border-radius:8px}
+footer{background:#14532d;color:#bbf7d0;padding:30px 20px;font-size:13px;text-align:center;font-family:system-ui,sans-serif;margin-top:50px}footer a{color:#fff;margin:0 7px}
+.disclosure{font-size:13px;color:#6b7280;font-family:system-ui,sans-serif;border-top:1px solid #e5e7eb;padding-top:14px;margin-top:30px}
+</style></head><body>
+<header><a href="./">Central Texas Home Guide</a></header>
+<div class="wrap">
+<h1>Home repair cost calculator</h1>
+<p class="lead">A quick estimate for the jobs that cost Central Texas homeowners the most. Enter your details and see the range you should expect before you call anyone.</p>
+<div class="ad">Advertisement</div>
+<div class="calc">
+<label>What needs doing?</label>
+<select id="job">
+<option value="ac">Air conditioning replacement</option>
+<option value="roof">Roof replacement, asphalt shingle</option>
+<option value="wh">Water heater replacement</option>
+<option value="found">Foundation repair</option>
+<option value="ins">Attic insulation and air sealing</option>
+<option value="soft">Water softener installed</option>
+</select>
+<label id="sizeLabel">Home size (square feet)</label>
+<input id="size" type="number" value="2000" min="500" max="8000">
+<label>Condition</label>
+<select id="extra">
+<option value="std">Standard — nothing unusual</option>
+<option value="hard">Harder job — poor access, two storeys, or old equipment</option>
+<option value="easy">Easier job — straightforward, good access, newer home</option>
+</select>
+<label>Your city (for the local factor)</label>
+<select id="city">
+<option value="1">Austin or Round Rock</option>
+<option value="1.05">Cedar Park, Georgetown or Leander</option>
+<option value="0.95">San Marcos or New Braunfels</option>
+<option value="0.9">San Antonio</option>
+<option value="0.85">Outlying smaller towns</option>
+</select>
+<button onclick="calcIt()">Show my estimate</button>
+<div id="result"></div>
+</div>
+<h2>How this works</h2>
+<p>Each job type has a cost per square foot, or a flat range for work that doesn't scale with house size, drawn from the ranges published in our guides. We then adjust for whether the job is straightforward, and for labour and overhead differences across the corridor — Austin and the northern suburbs run highest, San Antonio and the outlying towns lowest.</p>
+<p>This is a planning tool, not a quote. Its purpose is to tell you whether a contractor's number is in the right territory, and to give you a figure to compare three quotes against.</p>
+<div class="note"><b>The single best thing you can do:</b> get three written quotes on anything over $2,000, and ask every contractor the same questions so you compare like for like. Our guides list the exact questions to ask for each job.</div>
+<h2>Read the full guide for your job</h2>
+<ul>
+<li><a href="ac-cost-austin.html">Air conditioning replacement cost in Austin</a></li>
+<li><a href="roof-cost-central-texas.html">Roof replacement cost in Central Texas</a></li>
+<li><a href="water-heater-cost.html">Water heater replacement cost</a></li>
+<li><a href="foundation-repair-cost.html">Foundation repair cost</a></li>
+<li><a href="attic-insulation-cost.html">Attic insulation cost and savings</a></li>
+<li><a href="water-softener-cost.html">Water softener: is it worth it?</a></li>
+</ul>
+<div class="ad">Advertisement</div>
+<p class="disclosure">Some links on this site are affiliate links. If you buy through one, we may earn a commission at no extra cost to you. This calculator is a planning estimate and not a quotation or professional advice.</p>
+</div>
+<footer><a href="./">Home</a><a href="guides.html">Guides</a><a href="cost-calculator.html">Calculator</a><a href="recommended.html">Recommended</a><a href="about.html">About</a><a href="privacy.html">Privacy</a><a href="contact.html">Contact</a><br>© 2026 Central Texas Home Guide</footer>
+<script>
+const JOBS={
+ ac:{label:"Air conditioning replacement",low:3.2,high:6.2,flat:false,note:"Includes condenser, air handler and standard installation. Ductwork is extra and can add $1,500 to $4,000."},
+ roof:{label:"Roof replacement, asphalt shingle",low:4.5,high:9,flat:false,note:"Per square foot of home, assuming a standard pitch. Metal costs two to three times more."},
+ wh:{label:"Water heater replacement",low:1200,high:2600,flat:true,note:"40 to 50 gallon tank installed. Tankless runs $3,000 to $6,500."},
+ found:{label:"Foundation repair",low:2.6,high:6,flat:false,note:"Wide range, because it depends on how many piers are needed. Get elevation measurements, not opinions."},
+ ins:{label:"Attic insulation and air sealing",low:0.75,high:2.25,flat:false,note:"Air sealing is the higher-value half of this job in Central Texas."},
+ soft:{label:"Water softener installed",low:1500,high:4000,flat:true,note:"Running cost is $100 to $250 a year in salt."}
+};
+const MULT={std:1,hard:1.25,easy:0.88};
+function money(n){return "$"+Math.round(n).toLocaleString("en-US")}
+function calcIt(){
+ const j=JOBS[document.getElementById("job").value];
+ const size=+document.getElementById("size").value||2000;
+ const m=MULT[document.getElementById("extra").value];
+ const c=+document.getElementById("city").value;
+ let lo,hi;
+ if(j.flat){lo=j.low*m*c;hi=j.high*m*c}
+ else{lo=j.low*size*m*c;hi=j.high*size*m*c}
+ const r=document.getElementById("result");
+ r.style.display="block";
+ r.innerHTML=`<div>${j.label}, ${document.getElementById("city").options[document.getElementById("city").selectedIndex].text}</div>
+ <b>${money(lo)} – ${money(hi)}</b>
+ <div>${j.note}</div>`;
+}
+document.getElementById("job").addEventListener("change",function(){
+ const flat=JOBS[this.value].flat;
+ document.getElementById("size").style.display=flat?"none":"block";
+ document.getElementById("sizeLabel").style.display=flat?"none":"block";
+ calcIt();
+});
+document.getElementById("city").addEventListener("change",calcIt);
+document.getElementById("extra").addEventListener("change",calcIt);
+document.getElementById("size").addEventListener("input",calcIt);
+calcIt();
+</script></body></html>
